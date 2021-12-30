@@ -19,12 +19,6 @@ const showBooksList = (arr) => {
       </li>`).join('');
     displayList.innerHTML = `<h2> List of Books </h2> <ul> ${listBook} <ul>`;
   }
-  displayList.addEventListener('click', (e) => {
-    if (e.target.classList.contains('remove-button')) {
-      // eslint-disable-next-line no-use-before-define
-      removeBooks(e);
-    }
-  });
 };
 
 const removeBooks = (ev) => {
