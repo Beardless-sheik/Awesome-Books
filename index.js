@@ -4,7 +4,6 @@ class BookList {
     this.bookCounter = 0;
     this.inputForm = document.querySelector('#addBooks');
     this.displayList = document.querySelector('#bookList');
-    // window.addEventListener('DOMContentLoaded', this.init);
     this.inputForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const titleValue = document.getElementById('booktitle').value;
@@ -25,13 +24,19 @@ class BookList {
 
   showBooksList = (arr) => {
     if (arr.length <= 0) {
-      document.getElementById('bookList').innerHTML = '<h2> List of Books </h2> <ul><li> EMPTY LIST OF BOOKS <li></ul>';
+      document.getElementById('bookList').innerHTML = '<ul class="listbook-container"><li> EMPTY LIST OF BOOKS <li></ul>';
     } else {
-      const listBook = arr.map((book) => `
-        <li> '${book.title}' by ${book.author}
-        <button type='button' id='${book.id}' class='remove-button'>Remove</button>
-        </li>`).join('');
-      this.displayList.innerHTML = `<h2> List of Books </h2> <ul> ${listBook} <ul>`;
+      const listBook = arr.map((book, index) => {
+        if (index % 2 === 0) {
+          return `<li class="book-item-container-light"> '${book.title}' by ${book.author}
+                  <button type='button' id='${book.id}' class='remove-button'>Remove</button>
+                  </li>`;
+        }
+        return `<li class="book-item-container-dark"> '${book.title}' by ${book.author}
+          <button type='button' id='${book.id}' class='remove-button'>Remove</button>
+          </li>`;
+      }).join('');
+      this.displayList.innerHTML = `<ul class="listbook-container"> ${listBook} <ul>`;
     }
   }
 
