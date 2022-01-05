@@ -14,16 +14,60 @@
 </head>
 
 <body>
-	<h1 class="heading-text">Awesome Books</h1>
-	<div id="bookList" class="book-list">
-		
-	</div>
+  <nav>
+    <ul class="nav-container">
+      <li>
+         <p> Awesome Books </p> </li>
+      </li> 
+      <div class="list-nav-container">
+      <li class="list-nav-item" id="listBookLink"> <a href="#showList" > List </a></li>
+      <li class="list-nav-item" id="addNewBookLink"> <a href="#addNew" > Add New </a></li>
+      <li class="list-nav-item-no-border" id="contactSectionLink"> <a href="#contact"> Contact</a></li>
+    </div> 
+    </ul>
+    <div class="date-time" id="currentDate">  </div>
+  </nav>
 
+  <section class="listBooksSection">
+	<h1 class="heading-text">Awesome Books</h1>
+	<div id="bookList" class="book-list"> </div>
+  </section>
+
+  <section class="addBookformSection" id="addBook">
   <h3 class="heading-text"> Add a new book </h3>
 	<form id="addBooks" class="bookForm">
 		<input placeholder="Title" type="text" id="booktitle" class="input-text" required>
 		<input placeholder="Author" type="text" id="authorname" class="input-text" required>
 		<button type="submit" id="btn" class="add-button">Add</button>
 	</form>
+
+  <div class="alert-message heading text"></div>
+  </section>
+
+  <section class="welcomeMessage" id="welcomeMessage">
+    <h2>Welcome to Awesome Books.</h2>
+    <p>Click one of the links in the menu to Add a book to your 
+      collection or go to the contact tab to find a way to contact us if you have any suggestions 
+      or features you think we can include on the project</p>
+  </section>
+
+  <section class="contactSection" id="contactSection">
+    <h2>Contact Information</h2>
+    <p>Do you have any questions or do you just want to say Hi to us! <br> You can reach out to us!</p>
+    <div>
+      <ul class="contactDetails">
+        <li>Our email: list@example.com</li>
+        <li>Our phone number is: +260 - 3748 - 4758</li>
+        <li>Our address: Streetston plot 54, City, Country</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+
+  </section>
+  <footer>
+    <p>Copyright.  Alick</p> 
+   </footer>
 	<script type="module" src="./index.js"></script>
 </body>
