@@ -5,14 +5,20 @@
   font-family: "Gill Sans", sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .heading-text {
   margin: 15px auto;
-  width: 14rem;
+  width: 16rem;
 }
 
 .listbook-container {
   margin: 15px auto;
-  width: 30rem;
+  width: 95%;
   border: 1px solid;
 }
 
@@ -58,4 +64,85 @@ ul li {
   border-radius: 10px;
   width: 5rem;
   justify-self: end;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 4px 10px;
+  margin: 5px;
+}
+
+.list-nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.list-nav-item {
+  border-right: 0.5px solid black;
+  padding-right: 10px;
+}
+
+.welcomeMessage {
+  margin: 40px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcomeMessage h2 {
+  font-size: 3rem;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.welcomeMessage p {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 40px;
+  margin: 10px 20px;
+}
+
+.addBookformSection {
+  display: none;
+}
+
+.addBookformSection {
+  display: none;
+}
+
+.contactSection {
+  padding: 30px 20px;
+  margin: 40px auto;
+  border: 2px solid #000000;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  font-family: "Cooper Black", serif;
+  display: none;
+}
+
+.listBooksSection {
+  display: none;
+}
+
+.alert-message-text {
+  font-family: 'Segoe UI';
+  margin: 15px auto;
+  width: 16rem;
+}
+
+.date-time {
+  text-align: right;
+  margin: 10px 30px;
+}
+
+footer {
+  height: 30px;
+  border: 2px solid black;
+  margin: auto 5px 5px 5px;
+  background-color: white;
+  text-align: center;
+  padding-top: 10px;
 }
