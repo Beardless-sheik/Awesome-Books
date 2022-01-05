@@ -14,10 +14,9 @@ class BookList {
     this.welcomeMessageSection = document.querySelector('.welcomeMessage');
     this.alertBookAddMessage = document.querySelector('.alert-message');
 
-    // Previewing Date using Luxon being imported in the HTML directly
+    // Previewing Date using native Date Class and a setInterval
     this.currentdate = document.getElementById('currentDate');
     setInterval(() => {
-      console.log('interval working')
       const dt = new Date();
       this.currentdate.innerHTML = dt.toUTCString();
     }, 1000);
