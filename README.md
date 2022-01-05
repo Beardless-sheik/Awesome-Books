@@ -35,7 +35,7 @@ For tracking linter errors locally you need to follow these steps:
   > npx hint .
 
 - And for tracking the linter errors in CSS file run:
-  > npx stylelint "\*_/_.{css,scss}"
+  > npx stylelint "**/*.css"
 
 - And for tracking the linter errors in JS file run:
   > npx eslint . 

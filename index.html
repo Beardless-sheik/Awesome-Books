@@ -14,14 +14,16 @@
 </head>
 
 <body>
-	<h1>Awesome Books</h1>
+	<h1 class="heading-text">Awesome Books</h1>
 	<div id="bookList" class="book-list">
 		
 	</div>
+
+  <h3 class="heading-text"> Add a new book </h3>
 	<form id="addBooks" class="bookForm">
-		<input placeholder="Title" type="text" id="booktitle" required>
-		<input placeholder="Author" type="text" id="authorname" required>
-		<button type="submit" id="btn">Add</button>
+		<input placeholder="Title" type="text" id="booktitle" class="input-text" required>
+		<input placeholder="Author" type="text" id="authorname" class="input-text" required>
+		<button type="submit" id="btn" class="add-button">Add</button>
 	</form>
 	<script type="module" src="./index.js"></script>
 </body>
