@@ -2,7 +2,7 @@
 
 ## Description
 
-> This project was done in a Javascript module I'm taking from Microverse in how to use Javascript objects and DOM manipulation.
+> Simple project built in Vanilla Javascript. Uses DOM manipulation to add Books to a virtual library by using a title and author value given by the user. User is able to add or remove books using a regular form. Form submission done using custom form validation and books posted are listed in the personal users browser in the list. Data is preserved upon browser closure/ refresh using browser Local storage
 
 ## Live Demo
  - Live Deomo can be found [here](https://beardless-sheik.github.io/Awesome-Books/)
@@ -40,6 +40,11 @@ For tracking linter errors locally you need to follow these steps:
 - And for tracking the linter errors in JS file run:
   > npx eslint . 
 
+
+## Road Map 
+
+- User should be able to edit book entries. 
+- User should be able to add pictures of covers to be stored on another server and URL stored in the UI. 
 
 ## 👤 Author
 
