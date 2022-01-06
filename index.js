@@ -4,6 +4,23 @@ class BookList {
     this.bookCounter = 0;
     this.inputForm = document.querySelector('#addBooks');
     this.displayList = document.querySelector('#bookList');
+    this.showListLinkElement = document.getElementById('listBookLink');
+    this.addNewBookLinkElement = document.getElementById('addNewBookLink');
+    this.contactSectionLinkElement = document.getElementById('contactSectionLink');
+    this.welcomeSectionLinkElement = document.getElementById('welcomeMessage');
+    this.showListSection = document.querySelector('.listBooksSection');
+    this.addNewBookSection = document.querySelector('.addBookformSection');
+    this.contactSection = document.querySelector('.contactSection');
+    this.welcomeMessageSection = document.querySelector('.welcomeMessage');
+    this.alertBookAddMessage = document.querySelector('.alert-message');
+
+    // Previewing Date using native Date Class and a setInterval
+    this.currentdate = document.getElementById('currentDate');
+    setInterval(() => {
+      const dt = new Date();
+      this.currentdate.innerHTML = dt.toUTCString();
+    }, 1000);
+
     this.inputForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const titleValue = document.getElementById('booktitle').value;
@@ -11,6 +28,14 @@ class BookList {
       this.addBooks(titleValue, authorValue);
       this.inputForm.reset();
       this.showBooksList(this.bookCollection);
+      this.alertBookAddMessage.innerHTML = `
+      <p class="alert-message-text"> Book with Title: '${titleValue}' and Author: ${authorValue} has been added </p
+      `;
+      const thatBindThis = this;
+      this.alertBookAddMessage.style.display = 'block';
+      setTimeout(() => {
+        thatBindThis.alertBookAddMessage.style.display = 'none';
+      }, 3000);
     });
   }
 
@@ -52,6 +77,7 @@ class BookList {
   }
 
   init = () => {
+    // Initial Functions to run upon starting class
     const dataGet = localStorage.getItem('awesomeBooksCollection');
     const data = JSON.parse(dataGet);
     if (data) {
@@ -62,6 +88,28 @@ class BookList {
       if (e.target.classList.contains('remove-button')) {
         this.removeBooks(e);
       }
+    });
+
+    // Event Listeners for Link Clicks
+    this.showListLinkElement.addEventListener('click', () => {
+      this.addNewBookSection.style.display = 'none';
+      this.showListSection.style.display = 'block';
+      this.contactSection.style.display = 'none';
+      this.welcomeMessageSection.style.display = 'none';
+    });
+
+    this.addNewBookLinkElement.addEventListener('click', () => {
+      this.addNewBookSection.style.display = 'block';
+      this.showListSection.style.display = 'none';
+      this.contactSection.style.display = 'none';
+      this.welcomeMessageSection.style.display = 'none';
+    });
+
+    this.contactSectionLinkElement.addEventListener('click', () => {
+      this.addNewBookSection.style.display = 'none';
+      this.showListSection.style.display = 'none';
+      this.contactSection.style.display = 'block';
+      this.welcomeMessageSection.style.display = 'none';
     });
   };
 }
