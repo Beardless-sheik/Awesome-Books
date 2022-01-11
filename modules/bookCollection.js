@@ -38,7 +38,7 @@ export default class BookList {
       id: this.bookCounter, title: titleValue, author: authorValue,
     }];
     localStorage.setItem('awesomeBooksCollection', JSON.stringify(this.bookCollection));
-  }
+  };
 
   showBooksList = (arr) => {
     if (arr.length <= 0) {
@@ -56,7 +56,7 @@ export default class BookList {
       }).join('');
       this.displayList.innerHTML = `<ul class="listbook-container"> ${listBook} <ul>`;
     }
-  }
+  };
 
   removeBooks = (ev) => {
     const buttonId = ev.target.id;
@@ -67,7 +67,7 @@ export default class BookList {
     );
     localStorage.setItem('awesomeBooksCollection', JSON.stringify(this.bookCollection));
     this.showBooksList(this.bookCollection);
-  }
+  };
 
   init = () => {
     // Initial Functions to run upon starting class
