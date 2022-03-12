@@ -4,6 +4,9 @@
 
 > Simple project built in Vanilla Javascript. Uses DOM manipulation to add Books to a virtual library by using a title and author value given by the user. User is able to add or remove books using a regular form. Form submission done using custom form validation and books posted are listed in the personal users browser in the list. Data is preserved upon browser closure/ refresh using browser Local storage
 
+![awesomeBook screenshot](https://user-images.githubusercontent.com/44676055/158033429-26144031-4d30-4050-9f0b-c757d5694de7.JPG)
+
+
 ## Live Demo
  - Live Deomo can be found [here](https://beardless-sheik.github.io/Awesome-Books/)
 
